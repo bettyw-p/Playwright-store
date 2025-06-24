@@ -1,0 +1,42 @@
+{
+  "name": "pwts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "tsc --noEmit && eslint .",
+    "test": "npx playwright test",
+    "test:pwbasic": "npx playwright test -g @pwbasic",
+    "test:pwbasic:headed": "npx playwright test -g @pwbasic --headed",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:nolint": "npx playwright test",
+    "show-report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.10",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-playwright": "^2.2.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "endOfLine": "auto",
+    "printWidth": 120
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
