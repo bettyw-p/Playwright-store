@@ -1,7 +1,7 @@
 import { Page } from "@playwright/test";
 
 export abstract class BasePage {
-  protected url = '';
+  protected url = 'https://www.converse.pl';
   protected pageHeader = '';
 
   constructor (protected page: Page) {
