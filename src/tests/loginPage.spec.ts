@@ -10,6 +10,8 @@ test.describe('Login tests', () => {
     loginPage = new LoginPage(page);
     await loginPage.open();
     await expect(page).toHaveURL('https://www.converse.pl/login');
+    await loginPage.acceptCookieBanner.click();
+    await expect (loginPage.acceptCookieBanner).toBeHidden();
   });
 
   test('Verify successful login', async () => {

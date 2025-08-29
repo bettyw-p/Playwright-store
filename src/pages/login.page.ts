@@ -8,6 +8,7 @@ export class LoginPage extends BasePage {
   loginButton = this.page.getByRole('button', {name: 'Zaloguj się'})
   loginError = this.page.getByText('Nieprawidłowa nazwa użytkownika lub hasło.')
   greetingUser = this.page.getByText('Witaj,')
+  acceptCookieBanner = this.page.getByText('Tak, akceptuję')
 
   async fillData(email: string, password: string): Promise<void> {
     await this.emailLocator.fill(email);
